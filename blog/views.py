@@ -62,11 +62,11 @@ def post_share(request, post_id):
             # ... send email
     else:
         form = EmailPostForm()
-        return render(
+    return render(
             request,
             'blog/post/share.html',
             {
-                'post': post,
+            'post': post,
                 'form': form
             }
         )
